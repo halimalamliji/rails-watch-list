@@ -1,0 +1,17 @@
+<div class="border-bottom border-weight-2 my-3">
+  <h1 class="mb-3">All the lists</h1>
+</div>
+
+<div class="d-flex flex-column row">
+  <% @lists.each do |list| %>
+    <div class="card p-2 m-2 col-3">
+    <%= link_to list.name, list_path(list) %>
+    </div>
+  <% end %>
+</div>
+
+<div class="my-3">
+  <%= link_to new_list_path do %>
+    <i class="fa-solid fa-square-plus"></i> Add a new list
+  <% end %>
+</div>

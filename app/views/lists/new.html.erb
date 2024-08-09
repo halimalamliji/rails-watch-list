@@ -1,0 +1,10 @@
+<div class="border-bottom border-weight-2 my-3">
+  <h1 class="mb-3">Add a new list</h1>
+</div>
+
+<div class="d-flex">
+<%= simple_form_for(@list) do |f| %>
+  <%= f.input :name, wrapper_html: { class: 'col-6' } %>
+  <%= f.submit %>
+<% end %>
+</div>
